@@ -335,7 +335,7 @@ class PrusalinkCollector(Collector):
 
 def safe_nested_get(d: dict, fallback, *keys):
     """
-    Return the value at dict[ keys[0][keys[1]][keys[2]] (...) ],
+    Return the value at d[keys[0]][keys[1]][keys[2]] (...) ],
     or return fallback if the nested key does not exist
     """
 

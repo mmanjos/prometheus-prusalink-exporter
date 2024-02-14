@@ -1,0 +1,13 @@
+# Listening Port for the Prometheus Metrics Webserver
+exporter_port: 9528
+# Listening Address to bind to for the Prometheus Metrics Webserver
+exporter_address: 0.0.0.0
+# Number of seconds to wait for the printer to respond to an API request
+scrape_timeout: 10
+
+# List of printers and credentials to poll
+# You can use a hostname (like the example below) or IP address
+printers:
+  "prusaxl.mydomain.invalid":
+    username: "maker"
+    password: "myprinterpassword"

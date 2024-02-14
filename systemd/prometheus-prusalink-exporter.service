@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus Prusalink Exporter
+After=network.target
+
+[Service]
+User=prometheus
+ExecStart=/usr/local/bin/prusalink_exporter.py --config /etc/prusalink_exporter/config.yml
+
+[Install]
+WantedBy=multi-user.target

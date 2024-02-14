@@ -6,9 +6,9 @@ Prometheus exporter for the current generation of [PrusaLink-enabled](https://gi
 
 So far, this project has only been tested on the following printers:
 
-| Printer                                                        | Firmware | Prusalink Version | Supported |
-|----------------------------------------------------------------|----------|-------------------|-----------|
-| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | 5.1.2    | 2.1.2             | (/)       |
+| Printer                                                        | Firmware | Prusalink Version | Supported          |
+|----------------------------------------------------------------|----------|-------------------|--------------------|
+| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | 5.1.2    | 2.1.2             | :heavy_check_mark: |
 
 ## Installation
 

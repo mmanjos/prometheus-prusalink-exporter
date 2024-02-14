@@ -8,7 +8,7 @@ So far, this project has only been tested on the following printers:
 
 | Printer                                                        | Firmware | Prusalink Version | Supported          |
 |----------------------------------------------------------------|----------|-------------------|--------------------|
-| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | 5.1.2    | 2.1.2             | :heavy_check_mark: |
+| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | 5.1.2    | 2.1.2             | :white_check_mark: |
 
 ## Installation
 

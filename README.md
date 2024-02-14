@@ -2,6 +2,8 @@
 
 Prometheus exporter for the current generation of [PrusaLink-enabled](https://github.com/prusa3d/Prusa-Link-Web) Prusa 3D Printers, written in Python.
 
+ORIGINAL PRUSA is a trademark of [Prusa Development a.s., CZ](https://www.prusa3d.com/en/page/about-us_77/)
+
 ## Printer Support
 
 So far, this project has only been tested on the following printers:

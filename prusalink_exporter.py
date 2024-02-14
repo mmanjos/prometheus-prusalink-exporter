@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+# https://github.com/mmanjos/prometheus-prusalink-exporter
+
+__author__ = "github.com/mmanjos"
+__copyright__ = "Copyright 2024, Matthew Manjos"
+__license__ = "GPL-3"
+__version__ = "0.0.1"
+__maintainer__ = "Matthew Manjos"
+__email__ = "matt@manjos.com"
 
 import argparse
 import time

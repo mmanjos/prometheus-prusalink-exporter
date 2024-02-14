@@ -359,16 +359,14 @@ if __name__ == "__main__":
     }
 
     # Set default options if they aren't found in the config data
-    for setting, default in default_config.items():
-        try:
-            configdata[setting]
-        except KeyError:
+    for setting in default_config:
+        if setting not in configdata:
+            configdata[setting] = default_config[setting]
             logging.warning(
                 "Config setting {0} was not found! Defaulting to: {1}".format(
-                    setting, default
+                    setting, default_config[setting]
                 )
             )
-            configdata[setting] = default
 
     # Check that at least the list of printers exists in the loaded config file
     try:

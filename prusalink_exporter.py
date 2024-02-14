@@ -334,7 +334,11 @@ class PrusalinkCollector(Collector):
             yield state_metric
 
 def safe_nested_get(d: dict, fallback, *keys):
-    """Return the value at dict[keys], or fallback if the key doesn't exist"""
+    """
+    Return the value at d[ keys[0] ][ keys[1] ][ keys[2] ] ... [ keys[n] ],
+    or return fallback if the nested key does not exist
+    """
+
     value = fallback
     try:
         for k in keys:

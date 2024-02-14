@@ -53,22 +53,23 @@ Here's an example Prometheus job spec to read metrics from `prusalink_exporter.p
 
 ### Metrics
 
-| Metric                            | Description                                          |
-|-----------------------------------|------------------------------------------------------|
-| prusalink_server_firmware_version | Prusa Firmware Running on the Printer                |
-| prusalink_printer_state           | Current Printer State                                |
-| prusalink_nozzle_diameter         | Nozzle Diameter in mm                                |
-| prusalink_speed                   | Current Printer Configured Speed in Percent          |
-| prusalink_flow_rate               | Current Printer Configured Flow Rate in Percent      |
-| prusalink_bed_temp_current        | Current Printer Bed Temperature in Celcius           |
-| prusalink_bed_temp_desired        | Set (Desired) Printer Bed Temperature in Celcius     |
-| prusalink_nozzle_temp_current     | Current Extruder Nozzle Temperature in Celcius       |
-| prusalink_nozzle_temp_desired     | Set (Desired) Extruder Nozzle Temperature in Celcius |
-| prusalink_axis_z                  | Current Z Axis Position in mm                        |
-| prusalink_job_progress            | Current Job Progress in Percent                      |
-| prusalink_job_time_elapsed        | Current Job Elapsed Time Printing in Seconds         |
-| prusalink_job_time_remaining      | Current Job Time Remaining in Seconds                |
-| prusalink_job_info                | Information on the Current Active Job                |
+| Metric                            | Description                                             |
+|-----------------------------------|---------------------------------------------------------|
+| prusalink_scrape_successful       | Indicates if the scrape from the printer was successful |
+| prusalink_server_firmware_version | Prusa Firmware Running on the Printer                   |
+| prusalink_printer_state           | Current Printer State                                   |
+| prusalink_nozzle_diameter         | Nozzle Diameter in mm                                   |
+| prusalink_speed                   | Current Printer Configured Speed in Percent             |
+| prusalink_flow_rate               | Current Printer Configured Flow Rate in Percent         |
+| prusalink_bed_temp_current        | Current Printer Bed Temperature in Celcius              |
+| prusalink_bed_temp_desired        | Set (Desired) Printer Bed Temperature in Celcius        |
+| prusalink_nozzle_temp_current     | Current Extruder Nozzle Temperature in Celcius          |
+| prusalink_nozzle_temp_desired     | Set (Desired) Extruder Nozzle Temperature in Celcius    |
+| prusalink_axis_z                  | Current Z Axis Position in mm                           |
+| prusalink_job_progress            | Current Job Progress in Percent                         |
+| prusalink_job_time_elapsed        | Current Job Elapsed Time Printing in Seconds            |
+| prusalink_job_time_remaining      | Current Job Time Remaining in Seconds                   |
+| prusalink_job_info                | Information on the Current Active Job                   |
 
 ### Grafana
 

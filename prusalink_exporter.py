@@ -363,9 +363,9 @@ if __name__ == "__main__":
         try:
             configdata[setting]
         except KeyError:
-            logging.warning( "Config setting {0} was not found! Defaulting to: {1}".format(
-                str(setting),
-                str(default)
+            logging.warning(
+                "Config setting {0} was not found! Defaulting to: {1}".format(
+                    setting, default
                 )
             )
             configdata[setting] = default

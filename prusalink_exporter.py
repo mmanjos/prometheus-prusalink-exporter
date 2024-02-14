@@ -5,7 +5,6 @@ import time
 import json
 import sys
 import logging
-from contextlib import suppress
 import yaml
 import requests
 
@@ -329,11 +328,11 @@ class PrusalinkCollector(Collector):
 def safe_nested_get(d: dict, fallback, *keys):
     """Return the value at dict[keys], or fallback if the key doesn't exist"""
     value = fallback
-    with suppress(KeyError):
+    try:
         for k in keys:
             d = d[k]
         value = d
-    if value is fallback:
+    except KeyError:
         logging.warning( "Error finding a value from %s", keys )
     return value
 

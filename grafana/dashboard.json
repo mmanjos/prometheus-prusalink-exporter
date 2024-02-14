@@ -890,6 +890,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "min": 0,
           "max": 100,
           "thresholds": {
             "mode": "absolute",

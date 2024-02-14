@@ -75,7 +75,7 @@ Here's an example Prometheus job spec to read metrics from `prusalink_exporter.p
 
 ### Grafana
 
-You can deploy the included example [dashboard.json](dashboard.json) to your Grafana instance to visualize the metrics reported by prometheus-prusalink-exporter.
+You can deploy the included example [dashboard.json](grafana/dashboard.json) to your Grafana instance to visualize the metrics reported by prometheus-prusalink-exporter.
 
 ![Example Grafana Dashboard](.github/images/grafana-screenshot.png)
 

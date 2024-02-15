@@ -399,7 +399,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "(prusalink_job_time_remaining{printer=~\"$printer\"} + time())*1000",
+          "expr": "(avg_over_time(prusalink_job_time_remaining{printer=~\"$printer\"}[5m]) + time())*1000",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
@@ -1117,7 +1117,8 @@
   "schemaVersion": 39,
   "tags": [
     "home",
-    "playlist_main"
+    "playlist_main",
+    "3D Printing"
   ],
   "templating": {
     "list": [
@@ -1162,6 +1163,6 @@
   "timezone": "",
   "title": "Prusalink Exporter",
   "uid": "aea9d7d2-52dd-44ef-8bb7-ee3ef1475f1e",
-  "version": 3,
+  "version": 5,
   "weekStart": ""
 }

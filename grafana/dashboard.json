@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 33,
+  "id": 36,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -150,7 +150,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 13,
+        "w": 10,
         "x": 5,
         "y": 1
       },
@@ -220,7 +220,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 18,
+        "x": 15,
         "y": 1
       },
       "id": 17,
@@ -289,7 +289,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 21,
+        "x": 18,
         "y": 1
       },
       "id": 16,
@@ -328,6 +328,75 @@
         }
       ],
       "title": "Job: Print Time Remaining",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-orange",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dateTimeAsIso"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 21,
+        "y": 1
+      },
+      "id": 20,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {
+          "valueSize": 20
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "(prusalink_job_time_remaining{printer=~\"$printer\"} + time())*1000",
+          "instant": true,
+          "legendFormat": "__auto",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Job: Estimated Completion",
       "type": "stat"
     },
     {
@@ -890,8 +959,8 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "min": 0,
           "max": 100,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1069,6 +1138,6 @@
   "timezone": "",
   "title": "Prusalink Exporter",
   "uid": "aea9d7d2-52dd-44ef-8bb7-ee3ef1475f1e",
-  "version": 29,
+  "version": 2,
   "weekStart": ""
 }

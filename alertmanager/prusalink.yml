@@ -1,5 +1,13 @@
 - name: Prusalink Alerts
   rules:
+  - alert: Printer is Down
+    expr: prusalink_scrape_successful{} == 0
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "{{ $labels.printer }} is Down"
+      description: "{{ $labels.printer }} is either down or some metric was unable to be scraped successfully. If the printer is responsive, check prusalink_exporter logs for more information."
   - alert: Printer State is Unhealthy
     expr: prusalink_printer_state{state!~"(IDLE|BUSY|PRINTING|PAUSED|FINISHED|STOPPED|READY)"} == 1
     for: 1m

@@ -6,11 +6,13 @@ ORIGINAL PRUSA is a trademark of [Prusa Development a.s., CZ](https://www.prusa3
 
 ## Printer Support
 
-So far, this project has only been tested on the following printers:
+So far, this project has been tested on the following printers:
 
-| Printer                                                        | Firmware | Prusalink Version | Supported          |
-|----------------------------------------------------------------|----------|-------------------|--------------------|
-| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | 5.1.2    | 2.1.2             | :white_check_mark: |
+| Printer                                                        | Firmware                                                                        | Prusalink Version | Supported          |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------- | ------------------ |
+| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | [6.0.1](https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v6.0.1)    | 2.1.2             | :white_check_mark: |
+| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | [6.0.0](https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v6.0.0-xl) | 2.1.2             | :white_check_mark: |
+| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | [5.1.2](https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v5.1.2)    | 2.1.2             | :white_check_mark: |
 
 If you've had success running it on another platform, please [let me know](https://github.com/mmanjos/prometheus-prusalink-exporter/issues/new) and I'll add it to the list! Thanks!
 
@@ -56,7 +58,7 @@ Here's an example Prometheus job spec to read metrics from `prusalink_exporter.p
 ### Metrics
 
 | Metric                            | Description                                             |
-|-----------------------------------|---------------------------------------------------------|
+| --------------------------------- | ------------------------------------------------------- |
 | prusalink_scrape_successful       | Indicates if the scrape from the printer was successful |
 | prusalink_server_firmware_version | Prusa Firmware Running on the Printer                   |
 | prusalink_printer_state           | Current Printer State                                   |

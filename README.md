@@ -11,7 +11,7 @@ So far, this project has been tested on the following printers:
 | Printer                                                        | Firmware                                                                        | Prusalink Version | Supported          |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------- | ------------------ |
 | [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | [6.1.3](https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v6.1.3)    | 2.1.2             | :white_check_mark: |
-| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | [6.1.3](https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v6.0.3)    | 2.1.2             | :white_check_mark: |
+| [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | [6.0.3](https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v6.0.3)    | 2.1.2             | :white_check_mark: |
 | [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl/) | [5.1.2](https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v5.1.2)    | 2.1.2             | :white_check_mark: |
 
 If you've had success running it on another platform, please [let me know](https://github.com/mmanjos/prometheus-prusalink-exporter/issues/new) and I'll add it to the list! Thanks!

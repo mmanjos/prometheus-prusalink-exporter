@@ -1,34 +1,40 @@
 - name: Prusalink Alerts
   rules:
-  - alert: Printer is Down
-    expr: prusalink_scrape_successful{} == 0
-    for: 5m
-    labels:
-      severity: critical
-    annotations:
-      summary: "{{ $labels.printer }} is Down"
-      description: "{{ $labels.printer }} is either down or some metric was unable to be scraped successfully. If the printer is responsive, check prusalink_exporter logs for more information."
-  - alert: Printer State is Unhealthy
-    expr: prusalink_printer_state{state!~"(IDLE|BUSY|PRINTING|PAUSED|FINISHED|STOPPED|READY)"} == 1
-    for: 1m
-    labels:
-      severity: critical
-    annotations:
-      summary: "{{ $labels.printer }} is {{ $labels.state }}"
-      description: "{{ $labels.printer }} is reporting that it is in unhealthy state {{ $labels.state }}"
-  - alert: Printer Nozzle is Too Hot
-    expr: prusalink_nozzle_temp_current > 295
-    for: 5m
-    labels:
-      severity: critical
-    annotations:
-      summary: "{{ $labels.printer }} nozzle is too hot"
-      description: "{{ $labels.printer }} is reporting a hotend nozzle temperature of {{ $value }}°C, which is above the nominal max of 290°C"
-  - alert: Printer Bed is Too Hot
-    expr: prusalink_bed_temp_current > 125
-    for: 5m
-    labels:
-      severity: critical
-    annotations:
-      summary: "{{ $labels.printer }} nozzle is too hot"
-      description: "{{ $labels.printer }} is reporting a printer bed temperature of {{ $value }}°C, which is above the nominal max of 120°C"
+    - alert: Printer is Down
+      expr: prusalink_scrape_successful{} == 0
+      for: 5m
+      labels:
+        severity: critical
+      annotations:
+        summary: '{{ $labels.printer }} is Down'
+        description: '{{ $labels.printer }} is either down or some metric was unable
+          to be scraped successfully. If the printer is responsive, check prusalink_exporter
+          logs for more information.'
+    - alert: Printer State is Unhealthy
+      expr: prusalink_printer_state{state!~"(IDLE|BUSY|PRINTING|PAUSED|FINISHED|STOPPED|READY)"}
+        == 1
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        summary: '{{ $labels.printer }} is {{ $labels.state }}'
+        description: '{{ $labels.printer }} is reporting that it is in unhealthy state
+          {{ $labels.state }}'
+    - alert: Printer Nozzle is Too Hot
+      expr: prusalink_nozzle_temp_current > 295
+      for: 5m
+      labels:
+        severity: critical
+      annotations:
+        summary: '{{ $labels.printer }} nozzle is too hot'
+        description: '{{ $labels.printer }} is reporting a hotend nozzle temperature
+          of {{ $value }}°C, which is above the nominal max of 290°C'
+    - alert: Printer Bed is Too Hot
+      expr: prusalink_bed_temp_current > 125
+      for: 5m
+      labels:
+        severity: critical
+      annotations:
+        summary: '{{ $labels.printer }} nozzle is too hot'
+        description: '{{ $labels.printer }} is reporting a printer bed temperature
+          of {{ $value }}°C, which is above the nominal max of 120°C'
